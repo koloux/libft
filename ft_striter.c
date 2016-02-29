@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:47:21 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/26 11:46:25 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/02/28 15:31:20 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ void	ft_striter(char *s, void (*f)(char *))
 	cp = s;
 	if (s && f)
 	{
-		while (cp)
-			f(cp++);
+		while (*cp)
+		{
+			f(cp);
+			cp++;
+		}
 	}
 }

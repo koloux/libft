@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/25 22:05:55 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/28 14:28:25 by nhuber           ###   ########.fr       */
+/*   Created: 2016/02/28 17:46:19 by nhuber            #+#    #+#             */
+/*   Updated: 2016/02/29 09:39:09 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	unsigned int	i;
-	int		dif;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (s1[i] && s2[i])
+	t_list	*tmp;
+	t_list	*tmp2;
+	t_list	*head;
+	
+	if (!lst || !f)
+		return (NULL);
+	tmp2 = f(lst);
+	while ((head = ft_lstnew(tmp2->content, tmp2->content_size)))
 	{
-		dif = s1[i] - s2[i];
-		if (ft_isalpha(s1[i]) && ft_isalpha(s2[i]) 
-				&& dif != 0)
-			return (0);
-		i++;
+		tmp = head;
+		lst = lst->next;
+		if (!(tmp->next = ft_lstnew(tmp2->content, tmp2->content_size)))
+			return (NULL);
+		tmp = tmp->next;
+		lst = lst->next;
 	}
-	return (1);
+	return (head);
 }

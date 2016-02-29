@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/25 22:05:55 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/28 14:28:25 by nhuber           ###   ########.fr       */
+/*   Created: 2016/02/28 17:13:13 by nhuber            #+#    #+#             */
+/*   Updated: 2016/02/28 18:08:35 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	unsigned int	i;
-	int		dif;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (s1[i] && s2[i])
-	{
-		dif = s1[i] - s2[i];
-		if (ft_isalpha(s1[i]) && ft_isalpha(s2[i]) 
-				&& dif != 0)
-			return (0);
-		i++;
-	}
-	return (1);
+	if (alst == NULL || *alst == NULL)
+		return ;
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }

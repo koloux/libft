@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 15:11:29 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/25 15:15:59 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/02/28 14:18:33 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_memalloc(size_t size)
 {
 	void	*mem;
 
-	if (!(mem = malloc(size)))
+	if (!(mem = malloc(size)) || size == 0)
 		return (NULL);
-	ft_memset(mem, '0', size);
+	ft_bzero(mem, size);
 	return (mem);
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kpiacent <kpiacent@student.42.fr>          +#+  +:+       +#+         #
+#    By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/06 23:15:02 by kpiacent          #+#    #+#              #
-#*   Updated: 2016/02/27 13:27:51 by nhuber           ###   ########.fr       *#
+#*   Updated: 2016/02/29 11:26:15 by nhuber           ###   ########.fr       *#
 #                                                                              #
 #******************************************************************************#
 
@@ -25,7 +25,10 @@ FILES = ft_islower.c ft_memmove.c ft_strcat.c ft_strjoin.c ft_strnstr.c \
 	       	ft_toupper.c ft_isalpha.c ft_memcmp.c ft_putnbr_fd.c \
 		ft_strequ.c ft_strncpy.c ft_isascii.c ft_memcpy.c \
 		ft_putstr.c ft_striter.c ft_strnequ.c ft_isdigit.c \
-		ft_memdel.c ft_putstr_fd.c ft_striteri.c ft_strnew.c
+		ft_memdel.c ft_putstr_fd.c ft_striteri.c ft_strnew.c \
+		ft_strsplit.c \
+		ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
+		ft_lstmap.c ft_lstnew.c ft_lstput.c
 LIB = libft.a
 OBJ = $(FILES:.c=.o)
 TEMP = Makefile~ libft.h~ $(FILES:.c=.c~)

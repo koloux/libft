@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 09:49:18 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/26 09:53:47 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/02/28 15:00:57 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 	{
 		dif = s1[i] - s2[i];
 		if (ft_isalpha(s1[i]) && ft_isalpha(s2[i])
-				&& dif != 0 && dif != -32 && dif != 32)
+				&& dif != 0)
 			return (0);
 		i++;
 	}
 	return (1);
-
 }

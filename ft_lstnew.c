@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/25 22:05:55 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/28 14:28:25 by nhuber           ###   ########.fr       */
+/*   Created: 2016/02/28 16:37:03 by nhuber            #+#    #+#             */
+/*   Updated: 2016/02/29 10:58:34 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	unsigned int	i;
-	int		dif;
+	t_list	*elem;
 
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (s1[i] && s2[i])
+	if (!(elem = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	elem->next = NULL;
+	if (!content)
 	{
-		dif = s1[i] - s2[i];
-		if (ft_isalpha(s1[i]) && ft_isalpha(s2[i]) 
-				&& dif != 0)
-			return (0);
-		i++;
+		elem->content = NULL;
+		elem->content_size = 0;
 	}
-	return (1);
+	else
+	{
+		elem->content = content;
+		elem->content_size = content_size;
+	}
+	return (elem);
 }
