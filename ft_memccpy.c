@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 21:02:23 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/02 15:25:03 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/02 18:13:52 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	str = ft_strchr((const char *)src, c);
 	if (str == NULL)
 		ft_memcpy(dst, src, n);
-	else if (n == 0 || c == 0)
+	else if (n == 0)
 		return (NULL);
 	else
 	{
