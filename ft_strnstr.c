@@ -6,12 +6,12 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 10:30:53 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/27 13:23:45 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/02 14:24:20 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
