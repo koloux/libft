@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/28 16:37:03 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/29 10:58:34 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/02/29 11:32:24 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		elem->content = content;
+		elem->content = (void *)content;
 		elem->content_size = content_size;
 	}
 	return (elem);
