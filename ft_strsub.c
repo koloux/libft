@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 17:34:57 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/25 17:42:53 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/03 17:42:22 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char		*str;
 	unsigned int	i;
 
-	if ((str = ft_strnew(len + 1)) == NULL)
+	if ((str = ft_strnew(len)) == NULL)
 		return (NULL);
 	i = 0;
 	while (len--)

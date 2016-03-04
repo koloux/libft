@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 21:02:23 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/02 18:13:52 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 08:51:53 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	char	*str;
-	size_t	len;
+	size_t		i;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
-	str = ft_strchr((const char *)src, c);
-	if (str == NULL)
-		ft_memcpy(dst, src, n);
-	else if (n == 0)
-		return (NULL);
-	else
+	s1 = (unsigned char *)src;
+	s2 = (unsigned char *)dst;
+	i = 0;
+	while (i < n)
 	{
-		len = ft_strlen((const char *)src) - ft_strlen((const char *)str);
-		ft_memcpy(dst, src, len);
-		return (dst + len + 1);
+		if ((*s2++ = *s1++) == (unsigned char)c)
+			return (s2);
+		i++;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 17:03:01 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/02 17:18:27 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/03 17:42:34 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	if (!s && !f)
 		return (NULL);
-	if ((str = ft_strnew(ft_strlen(s) + 1)) == NULL)
+	if ((str = ft_strnew(ft_strlen(s))) == NULL)
 		return (NULL);
 	i = 0;
 	while (s[i])

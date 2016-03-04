@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/28 17:38:30 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/02 17:35:01 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/03 18:22:47 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list *head;
-
-	if (*alst)
+	if (*alst == NULL)
+		*alst = ft_lstnew(NULL, 0);	
+	if (*alst && new)
 	{
-		head = new;
-		head->next = *alst;
-		*alst = head;
-	}
+		new->next = *alst;
+		*alst = new;
+	}	
 }
