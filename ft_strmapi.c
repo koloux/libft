@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 17:31:19 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/03 17:43:33 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:23:03 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char		*str;
+	char			*str;
 
 	if (!s && !f)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/24 21:02:23 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/04 08:51:53 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:30:12 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*s1;
 	unsigned char	*s2;
 

@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 02:36:18 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/04 08:25:07 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:28:22 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ static	int	n_sign(int n)
 char		*ft_itoa(int n)
 {
 	char	*ret;
-	int	sign;
-	int	len;
+	int		sign;
+	int		len;
 
 	sign = n_sign(n);
 	len = n_length(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if(!(ret = (char *)malloc(sizeof(char) * (len + sign + 1))))
+	if (!(ret = (char *)malloc(sizeof(char) * (len + sign + 1))))
 		return (NULL);
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 15:18:22 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/26 11:50:57 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:24:46 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnew(size_t size)
 {
-	char		*str;
+	char			*str;
 	unsigned int	i;
 
 	i = 0;

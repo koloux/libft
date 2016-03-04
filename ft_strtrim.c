@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 17:42:59 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/28 15:56:31 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:21:33 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char		*trim;
+	char			*trim;
 	unsigned int	i;
 	unsigned int	j;
-	size_t		len;
+	size_t			len;
 
-	if (!s )
+	if (!s)
 		return (NULL);
 	i = 0;
 	j = 0;

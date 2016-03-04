@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 11:22:04 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/03 18:29:54 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:30:59 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char *s2;
 
 	s1 = (unsigned char *)dst;
-	s2 = (unsigned char *)src;	
+	s2 = (unsigned char *)src;
 	if (s1 > s2)
 	{
 		s1 += len;

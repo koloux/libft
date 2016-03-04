@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/28 17:46:19 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/04 10:14:01 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:29:33 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*tmp;
 	t_list	*tmp2;
 	t_list	*head;
-	
+
 	if (!lst || !f)
 		return (NULL);
 	tmp2 = f(lst);

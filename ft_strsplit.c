@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 17:27:10 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/29 10:32:08 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:26:05 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,17 @@ static size_t	wordlen(char const *s, char c)
 	return (count);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char		**str;
-	size_t		n;
+	char			**str;
+	size_t			n;
 	unsigned int	i;
 
 	n = countstr(s, c);
 	if (!(str = (char **)malloc(sizeof(char *) * (n + 1))))
 		return (NULL);
 	i = 0;
-	while (n --)
+	while (n--)
 	{
 		while (*s == c && *s)
 			s++;

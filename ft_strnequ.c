@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 09:49:18 by nhuber            #+#    #+#             */
-/*   Updated: 2016/02/28 15:00:57 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/04 11:25:07 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	unsigned int	i;
-	int		dif;
+	int				dif;
 
 	if (!s1 || !s2)
 		return (0);
