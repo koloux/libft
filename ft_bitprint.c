@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_bitprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/24 10:30:53 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/07 13:40:49 by nhuber           ###   ########.fr       */
+/*   Created: 2016/03/05 17:22:15 by nhuber            #+#    #+#             */
+/*   Updated: 2016/03/07 13:35:38 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t n)
+void	ft_bitprint(unsigned int nb)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	sp;
 
-	i = 0;
-	if (*little == '\0')
-		return ((char *)big);
-	while (big[i] != '\0' && i < n)
+	sp = 1;
+	i = 8 * sizeof(nb) - 1;
+	while (i >= 0)
 	{
-		j = 0;
-		while (little[j] == big[i + j] && little[j] && (i + j) <= n)
-		{
-			j++;
-			if (j == ft_strlen(little))
-				return ((char *)&big[i]);
-		}
-		i++;
+		(nb & (1 << i)) ? ft_putchar('1') : ft_putchar('0');
+		i--;
+		if (sp % 4 == 0)
+			ft_putchar(' ');
+		sp++;	
 	}
-	return (NULL);
+	ft_putchar('\n');
 }
