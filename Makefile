@@ -6,7 +6,7 @@
 #    By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/06 23:15:02 by kpiacent          #+#    #+#              #
-#*   Updated: 2016/03/07 13:36:36 by nhuber           ###   ########.fr       *#
+#*   Updated: 2016/03/11 15:25:29 by nhuber           ###   ########.fr       *#
 #                                                                              #
 #******************************************************************************#
 
@@ -26,7 +26,7 @@ FILES = ft_islower.c ft_memmove.c ft_strcat.c ft_strjoin.c ft_strnstr.c \
 		ft_strequ.c ft_strncpy.c ft_isascii.c ft_memcpy.c \
 		ft_putstr.c ft_striter.c ft_strnequ.c ft_isdigit.c \
 		ft_memdel.c ft_putstr_fd.c ft_striteri.c ft_strnew.c \
-		ft_strsplit.c \
+		ft_strsplit.c ft_sqroot.c \
 		ft_bitprint.c ft_bitsetfour.c ft_bitgetfour.c \
 		ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
 		ft_lstmap.c ft_lstnew.c ft_lstput.c
