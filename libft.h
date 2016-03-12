@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 16:02:05 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/11 15:26:28 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/12 20:29:30 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,8 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void	ft_lstput(t_list *lst);
 void	ft_bitprint(unsigned int nb);
 void	ft_bitsetfour(unsigned int *i, unsigned int val, unsigned int index);
-unsigned int	ft_bitgetfour(unsigned i, unsigned int index);
+unsigned int	ft_bitgetfour(unsigned int i, unsigned int index);
+unsigned int	ft_bitgetoctal(unsigned int i, unsigned int index);
 unsigned int	ft_sqroot(unsigned int n);
 
 #endif

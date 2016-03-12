@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqroot.c                                        :+:      :+:    :+:   */
+/*   ft_bitgetoctal.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/11 15:08:50 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/11 17:39:32 by nhuber           ###   ########.fr       */
+/*   Created: 2016/03/12 20:24:49 by nhuber            #+#    #+#             */
+/*   Updated: 2016/03/12 20:28:04 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_sqroot(unsigned int n)
+unsigned int	ft_bitgetoctal(unsigned int i, unsigned int index)
 {
-	unsigned int	i;
-
-	i = 1;
-	while (i * i < n)
-		i++;
-	return (i);
+	return (i >> index * 2 & 255);
 }
