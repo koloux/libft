@@ -6,7 +6,7 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/22 16:02:05 by nhuber            #+#    #+#             */
-/*   Updated: 2016/03/12 20:29:30 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/03/20 15:17:50 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void	ft_lstput(t_list *lst);
+void	ft_lstaddback(t_list **alst, t_list *new);
+void	ft_lstremoveif(t_list *head, void *data_ref);
 void	ft_bitprint(unsigned int nb);
 void	ft_bitsetfour(unsigned int *i, unsigned int val, unsigned int index);
 unsigned int	ft_bitgetfour(unsigned int i, unsigned int index);

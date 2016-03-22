@@ -6,7 +6,7 @@
 #    By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/06 23:15:02 by kpiacent          #+#    #+#              #
-#*   Updated: 2016/03/12 20:29:50 by nhuber           ###   ########.fr       *#
+#*   Updated: 2016/03/20 15:18:09 by nhuber           ###   ########.fr       *#
 #                                                                              #
 #******************************************************************************#
 
@@ -30,7 +30,8 @@ FILES = ft_islower.c ft_memmove.c ft_strcat.c ft_strjoin.c ft_strnstr.c \
 		ft_bitprint.c ft_bitsetfour.c ft_bitgetfour.c \
 		ft_bitgetoctal.c \
 		ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
-		ft_lstmap.c ft_lstnew.c ft_lstput.c
+		ft_lstmap.c ft_lstnew.c ft_lstput.c ft_lstaddback.c \
+		ft_lstremoveif.c
 NAME = libft.a
 OBJ = $(FILES:.c=.o)
 TEMP = Makefile~ libft.h~ $(FILES:.c=.c~)
