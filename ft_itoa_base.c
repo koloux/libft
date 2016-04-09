@@ -6,11 +6,11 @@
 /*   By: nhuber <nhuber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 15:22:49 by nhuber            #+#    #+#             */
-/*   Updated: 2016/04/05 16:12:51 by nhuber           ###   ########.fr       */
+/*   Updated: 2016/04/09 11:28:02 by nhuber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
 static size_t	nblen(int value, int base)
 {
@@ -50,20 +50,15 @@ char	*ft_itoa_base(int value, int base)
 		size = nblen(value, base);
 		if(!(res = (char *)ft_memalloc(size + flag + 1)))
 			return (NULL);
-		i = (int)size + flag;
+		i = (int)size + flag - 1;
 		while (value != 0)
 		{
-			res[i] = hex(value % 10);
+			res[i] = hex(value % base);
 			value /= base;
+			i--;
 		}
 		res[i] = (flag == 1) ? '-' : res[i];
 		res[size] = '\0';
 	}
 	return (res);
-}
-#include <stdio.h>
-int main(void)
-{
-	printf("%s\n", ft_itoa_base(24, 16));
-	return (0);
 }
